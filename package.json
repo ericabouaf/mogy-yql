@@ -1,0 +1,47 @@
+{
+    "name" : "mogy-yql",
+    "main" : "./index.js",
+    "version": "0.1.0",
+    "description": "YQL activity module for Mogy",
+    "author": {
+        "name": "Eric Abouaf",
+        "email": "eric.abouaf@gmail.com"
+    },
+    "dependencies": {
+        "request": "^2.50.0"
+    },
+    "keywords": [
+        "mogy-activity",
+        "yql"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/neyric/mogy-yql.git"
+    },
+    "activities": {
+        "yql": {
+            "defaultTaskHeartbeatTimeout": "NONE",
+            "defaultTaskScheduleToCloseTimeout": "NONE",
+            "defaultTaskScheduleToStartTimeout": "NONE",
+            "defaultTaskStartToCloseTimeout": "NONE",
+            "description": "Perform a query on a YQL",
+            "input_schema": {
+                "title": "YQL Activity Schema",
+                "type": "object",
+                "properties": {
+                    "yqlquery": {
+                        "type": "string"
+                    },
+                    "diagnostics": {
+                        "type": "string"
+                    },
+                    "envURL": {
+                        "type": "string"
+                    }
+                },
+                "required": ["yqlquery"]
+            }
+        }
+    }
+}
